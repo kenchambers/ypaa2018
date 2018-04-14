@@ -23,7 +23,11 @@ class HomeComponent extends Component {
   componentDidMount() {
     this.startCountdownClock();
     let video = document.querySelector('video');
+
     enableInlineVideo(video);
+    video.addEventListener('touchstart', function() {
+      video.play();
+    });
   }
 
   startCountdownClock = () => {
