@@ -81,7 +81,7 @@ class HomeComponent extends Component {
             <div
               className="second-block-text"
               style={{
-                height: 600
+                height: 400
               }}>
               <div
                 style={{
