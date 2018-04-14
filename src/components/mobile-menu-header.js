@@ -29,6 +29,10 @@ const buttonStyle = {
   padding: '5px',
   backgroundColor: '#261933'
 };
+const rowStyle = {};
+const linkStyle = {
+  width: '100%'
+};
 
 const SwipeMenu = ({ toggle, openMenu }) => {
   return (
@@ -41,64 +45,64 @@ const SwipeMenu = ({ toggle, openMenu }) => {
           onOpen={toggle}>
           <div tabIndex={0} role="button" onClick={toggle} onKeyDown={toggle}>
             <div style={{ backgroundColor: 'black', height: 420 }}>
-              <div className="row">
-                <Link to="/">
+              <div style={rowStyle} className="row">
+                <Link to="/" style={linkStyle}>
                   <Button style={buttonStyle} variant="raised" color="primary">
                     HOME
                   </Button>
                 </Link>
               </div>
-              <div className="row">
-                <Link to="/about">
+              <div style={rowStyle} className="row">
+                <Link to="/about" style={linkStyle}>
                   <Button style={buttonStyle} variant="raised" color="primary">
                     ABOUT
                   </Button>
                 </Link>
               </div>
-              <div className="row">
-                <Link to="/info">
+              <div style={rowStyle} className="row">
+                <Link to="/info" style={linkStyle}>
                   <Button style={buttonStyle} variant="raised" color="primary">
                     INFO
                   </Button>
                 </Link>
               </div>
-              <div className="row">
-                <Link to="/contact">
+              <div style={rowStyle} className="row">
+                <Link to="/contact" style={linkStyle}>
                   <Button style={buttonStyle} variant="raised" color="primary">
                     Docs
                   </Button>
                 </Link>
               </div>
-              <div className="row">
-                <Link to="/contact">
+              <div style={rowStyle} className="row">
+                <Link to="/contact" style={linkStyle}>
                   <Button style={buttonStyle} variant="raised" color="primary">
                     Bidding
                   </Button>
                 </Link>
               </div>
-              <div className="row">
-                <Link to="/contact">
+              <div style={rowStyle} className="row">
+                <Link to="/contact" style={linkStyle}>
                   <Button style={buttonStyle} variant="raised" color="primary">
                     Advisory Council
                   </Button>
                 </Link>
               </div>
-              <div className="row">
-                <Link to="/contact">
+              <div style={rowStyle} className="row">
+                <Link to="/contact" style={linkStyle}>
                   <Button style={buttonStyle} variant="raised" color="primary">
                     Archives
                   </Button>
                 </Link>
               </div>
-              <div className="row">
-                <Link to="/contact">
+              <div style={rowStyle} className="row">
+                <Link to="/contact" style={linkStyle}>
                   <Button style={buttonStyle} variant="raised" color="primary">
                     Store
                   </Button>
                 </Link>
               </div>
-              <div className="row">
-                <Link to="/contact">
+              <div style={rowStyle} className="row">
+                <Link to="/contact" style={linkStyle}>
                   <Button style={buttonStyle} variant="raised" color="primary">
                     Contact
                   </Button>
