@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Parallax, Background } from 'react-parallax';
+import enableInlineVideo from 'iphone-inline-video';
+
 class HomeComponent extends Component {
   classPropertyA = 'anything';
   style = {
@@ -19,6 +21,8 @@ class HomeComponent extends Component {
   };
   componentDidMount() {
     this.startCountdownClock();
+    let video = document.querySelector('video');
+    enableInlineVideo(video);
   }
 
   startCountdownClock = () => {
@@ -112,14 +116,12 @@ class HomeComponent extends Component {
           </div>
           <Background className="custom-bg">
             <video
+              playsinline
               loop
-              className="video-container video-container-overlay"
-              autoPlay="true">
-              <source
-                src={require('../assets/videos/testvideo.mp4')}
-                type="video/mp4"
-              />
-            </video>
+              muted
+              autoPlay
+              src={require('../assets/videos/testvideo.mp4')}
+            />
           </Background>
         </Parallax>
         <div id="countdown-container" style={{ height: 300 }}>
