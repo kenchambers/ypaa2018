@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Parallax, Background } from 'react-parallax';
 import enableInlineVideo from 'iphone-inline-video';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 class HomeComponent extends Component {
   classPropertyA = 'anything';
@@ -124,30 +125,32 @@ class HomeComponent extends Component {
             />
           </Background>
         </Parallax>
-        <div id="countdown-container" style={{ height: 300 }}>
-          <Parallax>
-            <h1>When?</h1>
-            <h3>June 26th, 2019</h3>
-            <div id="clockdiv">
-              <div>
-                <span className="days" />
-                <div className="smalltext">Days</div>
+        <ScrollAnimation animateIn="fadeIn">
+          <div id="countdown-container" style={{ height: 300 }}>
+            <Parallax>
+              <h1>When?</h1>
+              <h3>June 26th, 2019</h3>
+              <div id="clockdiv">
+                <div>
+                  <span className="days" />
+                  <div className="smalltext">Days</div>
+                </div>
+                <div>
+                  <span className="hours" />
+                  <div className="smalltext">Hours</div>
+                </div>
+                <div>
+                  <span className="minutes" />
+                  <div className="smalltext">Minutes</div>
+                </div>
+                <div>
+                  <span className="seconds" />
+                  <div className="smalltext">Seconds</div>
+                </div>
               </div>
-              <div>
-                <span className="hours" />
-                <div className="smalltext">Hours</div>
-              </div>
-              <div>
-                <span className="minutes" />
-                <div className="smalltext">Minutes</div>
-              </div>
-              <div>
-                <span className="seconds" />
-                <div className="smalltext">Seconds</div>
-              </div>
-            </div>
-          </Parallax>
-        </div>
+            </Parallax>
+          </div>
+        </ScrollAnimation>
 
         <Parallax
           blur={{ min: -5, max: 5 }}
@@ -160,112 +163,117 @@ class HomeComponent extends Component {
             }}
           />
         </Parallax>
-        <div
-          style={{
-            height: 475
-          }}>
-          <div>
-            <h1>Where?!?!?</h1>
-            <h2>Shrine Auditorium</h2>
-            <span>665 W Jefferson Blvd,</span>
-            <br />
-            <span>Los Angeles, CA 90007</span>
-
-            <img
-              style={{ marginTop: 20, width: 300 }}
-              alt="where"
-              src={require('../assets/map.png')}
-            />
-          </div>
-        </div>
-
-        <Parallax
-          blur={{ min: -5, max: 5 }}
-          bgImage={require('../assets/club.jpg')}
-          strength={200}>
+        <ScrollAnimation animateIn="fadeIn">
           <div
             style={{
-              width: 'fit-content',
-              height: 600,
-              color: 'white'
+              height: 475
             }}>
-            <h1>WHY?!</h1>
+            <div>
+              <h1>Where?!?!?</h1>
+              <h2>Shrine Auditorium</h2>
+              <span>665 W Jefferson Blvd,</span>
+              <br />
+              <span>Los Angeles, CA 90007</span>
 
-            <p>
-              In 1973, the All California Young People in Alcoholics Anonymous
-              Round-Up was established as an annual gathering in California to
-              provide an opportunity for young AA's to come together and share
-              their experience, strength, and hope.
-            </p>
-            <p>
-              ACYPAA is visible evidence that large numbers of people are
-              achieving a lasting and comfortable sobriety in Alcoholics
-              Anonymous. AA's who attend an ACYPAA Round-Up return home better
-              prepared to receive young alcoholics who come to AA seeking
-              recovery.
-            </p>
-            <p>
-              The ACYPAA Round-Up is held anywhere in California where young
-              people's groups can demonstrate:
-            </p>
-            <p>
-              <p>
-                1) the need for an activity like this to stimulate greater
-                involvement and participation by young people in their area;
-              </p>
-
-              <p>
-                2) the ability of their group to function responsibly within the
-                principles of Alcoholics Anonymous;
-              </p>
-
-              <p>
-                3) the ability of the group to host a Round-Up representative of
-                the diversity of California young people in Alcoholics
-                Anonymous.
-              </p>
-            </p>
+              <img
+                style={{ marginTop: 20, width: 300 }}
+                alt="where"
+                src={require('../assets/map.png')}
+              />
+            </div>
           </div>
-        </Parallax>
-        <div style={{ height: 100 }}>
-          <h1>Follow Us</h1>
-          <div style={{ height: 100 }} className="container">
-            <div className="row" style={{ margin: '5%' }}>
-              <div
-                style={this.style.socialMediaIconStyle}
-                className="col col-centered">
-                <img
-                  alt="social media icon"
-                  src={require('../../src/assets/facebook.svg')}
-                />
-              </div>
-              <div
-                style={this.style.socialMediaIconStyle}
-                className="col col-centered">
-                <img
-                  alt="social media icon"
-                  src={require('../../src/assets/instagram.svg')}
-                />
-              </div>
-              <div
-                style={this.style.socialMediaIconStyle}
-                className="col col-centered">
-                <img
-                  alt="social media icon"
-                  src={require('../../src/assets/twitter.svg')}
-                />
-              </div>
-              <div
-                style={this.style.socialMediaIconStyle}
-                className="col col-centered">
-                <img
-                  alt="social media icon"
-                  src={require('../../src/assets/linkedin.svg')}
-                />
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeIn">
+          <Parallax
+            blur={{ min: -5, max: 5 }}
+            bgImage={require('../assets/club.jpg')}
+            strength={200}>
+            <div
+              style={{
+                width: 'fit-content',
+                height: 600,
+                color: 'white'
+              }}>
+              <h1>WHY?!</h1>
+
+              <p>
+                In 1973, the All California Young People in Alcoholics Anonymous
+                Round-Up was established as an annual gathering in California to
+                provide an opportunity for young AA's to come together and share
+                their experience, strength, and hope.
+              </p>
+              <p>
+                ACYPAA is visible evidence that large numbers of people are
+                achieving a lasting and comfortable sobriety in Alcoholics
+                Anonymous. AA's who attend an ACYPAA Round-Up return home better
+                prepared to receive young alcoholics who come to AA seeking
+                recovery.
+              </p>
+              <p>
+                The ACYPAA Round-Up is held anywhere in California where young
+                people's groups can demonstrate:
+              </p>
+              <p>
+                <p>
+                  1) the need for an activity like this to stimulate greater
+                  involvement and participation by young people in their area;
+                </p>
+
+                <p>
+                  2) the ability of their group to function responsibly within
+                  the principles of Alcoholics Anonymous;
+                </p>
+
+                <p>
+                  3) the ability of the group to host a Round-Up representative
+                  of the diversity of California young people in Alcoholics
+                  Anonymous.
+                </p>
+              </p>
+            </div>
+          </Parallax>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeIn">
+          <div style={{ height: 100 }}>
+            <h1>Follow Us</h1>
+            <div style={{ height: 100 }} className="container">
+              <div className="row" style={{ margin: '5%' }}>
+                <div
+                  style={this.style.socialMediaIconStyle}
+                  className="col col-centered">
+                  <img
+                    alt="social media icon"
+                    src={require('../../src/assets/facebook.svg')}
+                  />
+                </div>
+                <div
+                  style={this.style.socialMediaIconStyle}
+                  className="col col-centered">
+                  <img
+                    alt="social media icon"
+                    src={require('../../src/assets/instagram.svg')}
+                  />
+                </div>
+                <div
+                  style={this.style.socialMediaIconStyle}
+                  className="col col-centered">
+                  <img
+                    alt="social media icon"
+                    src={require('../../src/assets/twitter.svg')}
+                  />
+                </div>
+                <div
+                  style={this.style.socialMediaIconStyle}
+                  className="col col-centered">
+                  <img
+                    alt="social media icon"
+                    src={require('../../src/assets/linkedin.svg')}
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </ScrollAnimation>
       </div>
     );
   }
