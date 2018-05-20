@@ -17,9 +17,7 @@ class DoubleBorderContainer extends Component {
           className="second-block-text"
           style={{
             height: 315,
-            width: '100%',
-            marginTop: '2em',
-            paddingTop: '5em'
+            width: '100%'
           }}>
           <div
             style={{

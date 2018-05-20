@@ -100,7 +100,7 @@ class App extends BaseComponent {
               </div>
             </div>
           )}
-          <div>
+          <div id="main-scroll-container">
             <Route exact path="/" component={AppViews.Home} />
             <Route exact path="/program" component={AppViews.Program} />
             <Route exact path="/hotel" component={AppViews.Hotel} />

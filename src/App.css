@@ -51,6 +51,11 @@ body {
   }
 }
 
+#main-scroll-container {
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+}
+
 #countdown-container {
   text-align: center;
   /* background: #00ecb9; */
@@ -91,4 +96,15 @@ h1 {
 .smalltext {
   padding-top: 5px;
   font-size: 16px;
+}
+
+@media all and (min-width: 576px) {
+  p {
+    font-size: 1em !important;
+  }
+  /* Your CSS rules */
+}
+
+@media all and (min-width: 768px) {
+  /* Your CSS rules */
 }

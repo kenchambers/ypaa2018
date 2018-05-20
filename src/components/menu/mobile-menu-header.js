@@ -19,12 +19,14 @@ const theme = createMuiTheme({
 });
 
 const buttonStyle = {
-  width: '100%',
+  width: '70vw',
   margin: '7px',
+  color: '#d7f4ff',
   padding: '5px',
-  backgroundColor: '#f56f00',
+  background: '#333434',
   fontFamily: 'san-serif',
-  textDecoration: 'none !important'
+  textDecoration: 'none !important',
+  borderRadius: '30px'
 };
 const rowStyle = {};
 const linkStyle = {
@@ -37,50 +39,56 @@ const SwipeMenu = ({ toggle, openMenu }) => {
     <div>
       <MuiThemeProvider theme={theme}>
         <SwipeableDrawer
-          anchor="top"
+          anchor="bottom"
           open={openMenu}
           onClose={toggle}
           onOpen={toggle}>
           <div tabIndex={0} role="button" onClick={toggle} onKeyDown={toggle}>
-            <div style={{ background: '#720000', height: 420 }}>
+            <div
+              style={{
+                background: 'rgb(64, 50, 60)',
+                color: '#d7f4ff',
+                height: 420,
+                textAlign: 'center'
+              }}>
               <div style={rowStyle} className="row">
                 <Link to="/" style={linkStyle}>
-                  <Button style={buttonStyle} variant="raised" color="primary">
+                  <Button style={buttonStyle} variant="raised">
                     <h2>HOME</h2>
                   </Button>
                 </Link>
               </div>
               <div style={rowStyle} className="row">
                 <Link to="/program" style={linkStyle}>
-                  <Button style={buttonStyle} variant="raised" color="primary">
+                  <Button style={buttonStyle} variant="raised">
                     <h2>program</h2>
                   </Button>
                 </Link>
               </div>
               <div style={rowStyle} className="row">
                 <Link to="/hotel" style={linkStyle}>
-                  <Button style={buttonStyle} variant="raised" color="primary">
+                  <Button style={buttonStyle} variant="raised">
                     <h2>hotel</h2>
                   </Button>
                 </Link>
               </div>
               <div style={rowStyle} className="row">
                 <Link to="/register" style={linkStyle}>
-                  <Button style={buttonStyle} variant="raised" color="primary">
+                  <Button style={buttonStyle} variant="raised">
                     <h2>register</h2>
                   </Button>
                 </Link>
               </div>
               <div style={rowStyle} className="row">
                 <Link to="/volunteer" style={linkStyle}>
-                  <Button style={buttonStyle} variant="raised" color="primary">
+                  <Button style={buttonStyle} variant="raised">
                     <h2>volunteer</h2>
                   </Button>
                 </Link>
               </div>
               <div style={rowStyle} className="row">
                 <Link to="/contact" style={linkStyle}>
-                  <Button style={buttonStyle} variant="raised" color="primary">
+                  <Button style={buttonStyle} variant="raised">
                     <h2>contact</h2>
                   </Button>
                 </Link>
