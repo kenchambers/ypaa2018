@@ -1,0 +1,18 @@
+<svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text font-weight="normal" stroke="#fcfc11" transform="matrix(2.7122557297009027,0,0,2.7122557297009027,-177.3660265754716,-36.135527186848684) " xml:space="preserve" text-anchor="start" font-family="'Trebuchet MS', Gadget, sans-serif" font-size="24" id="svg_1" y="38.825255" x="73.842247" stroke-width="0" fill="#ffffff">THE 47TH ANNUAL</text>
+  <text font-weight="normal" stroke="#fcfc11" transform="matrix(3.1496181199885984,0,0,3.1496181199885984,-301.10832752184217,-322.80431238508356) " xml:space="preserve" text-anchor="start" font-family="'Trebuchet MS', Gadget, sans-serif" font-size="24" id="svg_3" y="142.342189" x="101.670669" stroke-width="0" fill="#ffffff">ALL CALIFORNIA</text>
+  <text font-weight="normal" stroke="#fcfc11" transform="matrix(2.0968099772047264,0,0,2.0968099772047264,-167.11733688065772,-226.90881913707574) " xml:space="preserve" text-anchor="start" font-family="'Trebuchet MS', Gadget, sans-serif" font-size="24" id="svg_4" y="212.071684" x="89.050461" stroke-width="0" fill="#ffffff">ALCHOLICS ANONYMOUS</text>
+  <text font-weight="normal" stroke="#fcfc11" transform="matrix(2.7909310133447764,0,0,2.7909310133447764,-5.251704580161263,-488.32328983579265) " xml:space="preserve" text-anchor="start" font-family="'Trebuchet MS', Gadget, sans-serif" font-size="24" id="svg_6" y="239.00592" x="8.913775" stroke-width="0" fill="#ffffff">YOUNG PEOPLE IN</text>
+  <text font-weight="normal" stroke="#fcfc11" transform="matrix(3.3076721035900847,0,0,3.3076721035900847,-21.65454743352651,-510.4017884705661) " xml:space="preserve" text-anchor="start" font-family="'Trebuchet MS', Gadget, sans-serif" font-size="24" id="svg_7" y="239.338158" x="10.376906" stroke-width="0" fill="#ffffff">ROUND UP 2019</text>
+ </g>
+</svg>

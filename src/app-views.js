@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import HomeComponent from './views/home';
-import ContactComponent from './views/contact';
-import AboutComponent from './views/about';
-import InfoComponent from './views/info';
+import HomeComponent from './views/home/home';
+import ProgramComponent from './views/program/program';
+import HotelComponent from './views/hotel/hotel';
+import RegisterComponent from './views/register/register';
+import VolunteerComponent from './views/volunteer/volunteer';
+import ContactComponent from './views/contact/contact';
 
 export default class AppViews extends Component {
   static Home = () => (
@@ -10,19 +12,30 @@ export default class AppViews extends Component {
       <HomeComponent />
     </div>
   );
+  static Program = () => (
+    <div>
+      <ProgramComponent />
+    </div>
+  );
+  static Hotel = () => (
+    <div>
+      <HotelComponent />
+    </div>
+  );
+  static Register = () => (
+    <div>
+      <RegisterComponent />
+    </div>
+  );
+
+  static Volunteer = () => (
+    <div>
+      <VolunteerComponent />
+    </div>
+  );
   static Contact = () => (
     <div>
       <ContactComponent />
-    </div>
-  );
-  static About = () => (
-    <div>
-      <AboutComponent />
-    </div>
-  );
-  static Info = () => (
-    <div>
-      <InfoComponent />
     </div>
   );
 }

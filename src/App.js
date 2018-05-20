@@ -1,27 +1,20 @@
-import React, { createContext, Component } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Button from 'material-ui/Button';
-import { withStyles } from 'material-ui/styles';
+import { withStyles, createMuiTheme } from 'material-ui/styles';
 import AppViews from './app-views';
-import MobileMenuHeader from './components/mobile-menu-header';
-
+import MobileMenuHeader from './components/menu/mobile-menu-header';
+import ScrollAnimation from 'react-animate-on-scroll';
+import { styles, MenuButton } from './components/menu/material-ui-custom-menu';
 import BaseComponent from './base-component';
-const styles = {
-  dark: {
-    backgroundColor: 'black',
-    color: 'white'
-  },
-  light: {
-    backgroundColor: 'white',
-    color: 'black'
-  }
-};
+
 class App extends BaseComponent {
   state = {
     openMenu: false,
-    showMenu: false
+    showMenu: false,
+    opacity: null
   };
   addMobileMenu = () => {
     if (window.innerWidth < 500) {
@@ -42,6 +35,8 @@ class App extends BaseComponent {
     this.addMobileMenu();
   }
   render() {
+    const { classes } = this.props;
+
     return (
       <Router>
         <div className="App">
@@ -52,34 +47,65 @@ class App extends BaseComponent {
               openMenu={this.state.openMenu}
             />
           ) : (
-            <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
-              <Link to="/">
-                <Button variant="raised" color="primary">
-                  HOME
-                </Button>
-              </Link>
-              <Link to="/about">
-                <Button variant="raised" color="primary">
-                  ABOUT
-                </Button>
-              </Link>
-              <Link to="/info">
-                <Button variant="raised" color="primary">
-                  INFO
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button variant="raised" color="primary">
-                  Contact
-                </Button>
-              </Link>
-            </header>
+            <div>
+              <div
+                style={{
+                  width: '100%',
+                  height: '5%',
+                  position: 'fixed',
+                  zIndex: 9
+                }}
+              />
+              <div
+                style={{
+                  position: 'fixed',
+                  zIndex: 10
+                }}>
+                <div className="container">
+                  <div className="row">
+                    <div className="col">
+                      <Link to="/" style={{ textDecoration: 'none' }}>
+                        <MenuButton text="home" classes={classes} />
+                      </Link>
+                    </div>
+                    <div className="col">
+                      <Link to="/program" style={{ textDecoration: 'none' }}>
+                        <MenuButton text="program" classes={classes} />
+                      </Link>
+                    </div>
+                    <div className="col">
+                      <Link to="/hotel" style={{ textDecoration: 'none' }}>
+                        <MenuButton text="hotel" classes={classes} />
+                      </Link>
+                    </div>
+                    <div className="col">
+                      <Link to="/register" style={{ textDecoration: 'none' }}>
+                        <MenuButton text="register" classes={classes} />
+                      </Link>
+                    </div>
+                    <div className="col">
+                      <Link
+                        to="/volunteer"
+                        style={{ textDecoration: 'none', outline: 'none' }}>
+                        <MenuButton text="volunteer" classes={classes} />
+                      </Link>
+                    </div>
+                    <div className="col">
+                      <Link to="/contact" style={{ textDecoration: 'none' }}>
+                        <MenuButton text="contact" classes={classes} />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           )}
           <div>
             <Route exact path="/" component={AppViews.Home} />
-            <Route exact path="/about" component={AppViews.About} />
-            <Route exact path="/info" component={AppViews.Info} />
+            <Route exact path="/program" component={AppViews.Program} />
+            <Route exact path="/hotel" component={AppViews.Hotel} />
+            <Route exact path="/register" component={AppViews.Register} />
+            <Route exact path="/volunteer" component={AppViews.Volunteer} />
             <Route exact path="/contact" component={AppViews.Contact} />
           </div>
         </div>
@@ -87,5 +113,4 @@ class App extends BaseComponent {
     );
   }
 }
-
 export default withStyles(styles)(App);
